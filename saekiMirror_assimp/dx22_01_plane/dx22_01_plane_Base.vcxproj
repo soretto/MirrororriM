@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\directxtk\include;C:\assimp\assimp\5.2.5\include;C:\Library\assimp\assimp\5.2.5\include;C:\Library\directxtk\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\directxtk\lib\x64\Debug;C:\assimp\assimp\5.2.5\lib;C:\Library\assimp\assimp\5.2.5\lib;C:\Library\directxtk\lib\x64\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\HEWLibrary\assimp\5.2.5\include;C:\HEWLibrary\directxtk\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\HEWLibrary\assimp\5.2.5\lib;C:\HEWLibrary\directxtk\lib\x64\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>C:\directxtk\include;$(IncludePath)</IncludePath>
