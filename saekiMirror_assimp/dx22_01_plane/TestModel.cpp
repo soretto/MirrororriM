@@ -15,7 +15,8 @@ void TestModel::Init()
 	StaticMesh staticmesh;
 
 	//3Dモデルデータ
-	//std::u8string modelFile = u8"assets/model/cylinder/cylinder.obj";
+
+	//std::u8string modelFile = u8"assets\\model\\cylinder\\cylinder.obj";
 	std::u8string modelFile = u8"assets/model/Stages/stage01.obj";
 
 	//テクスチャディレクトリ
@@ -30,6 +31,7 @@ void TestModel::Init()
 
 	// シェーダオブジェクト生成
 	m_Shader.Create("shader/litTextureVS.hlsl", "shader/litTexturePS.hlsl");
+
 
 	// サブセット情報取得
 	m_subsets = staticmesh.GetSubsets();
