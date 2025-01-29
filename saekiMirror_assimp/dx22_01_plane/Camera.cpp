@@ -19,31 +19,31 @@ void Camera::Init()
 //=======================================
 void Camera::Update()
 {
-	//if (Input::GetKeyPress('W'))
-	if (GetAsyncKeyState('W') & 0x8000)
-	{
-		m_Position.x += 1.0f;
-		//MirrorMoveFg = true;
-	}
-	//if (Input::GetKeyPress('S'))
-	if (GetAsyncKeyState('S') & 0x8000)
-	{
-		m_Position.x -= 1.0f;
-		//MirrorMoveFg = true;
-	}
-	//if (Input::GetKeyPress('A'))
-	if (GetAsyncKeyState('A') & 0x8000)
-	{
-		m_Position.z += 1.0f;
-		//MirrorMoveFg = true;
-	}
-	//if (Input::GetKeyPress('D'))
-	if (GetAsyncKeyState('D') & 0x8000)
-	{
-		m_Position.z -= 1.0f;
-		//MirrorMoveFg = true;
-	}
-	SetPosition(m_Position);
+	////if (Input::GetKeyPress('W'))
+	//if (GetAsyncKeyState('W') & 0x8000)
+	//{
+	//	m_Position.x += 1.0f;
+	//	//MirrorMoveFg = true;
+	//}
+	////if (Input::GetKeyPress('S'))
+	//if (GetAsyncKeyState('S') & 0x8000)
+	//{
+	//	m_Position.x -= 1.0f;
+	//	//MirrorMoveFg = true;
+	//}
+	////if (Input::GetKeyPress('A'))
+	//if (GetAsyncKeyState('A') & 0x8000)
+	//{
+	//	m_Position.z += 1.0f;
+	//	//MirrorMoveFg = true;
+	//}
+	////if (Input::GetKeyPress('D'))
+	//if (GetAsyncKeyState('D') & 0x8000)
+	//{
+	//	m_Position.z -= 1.0f;
+	//	//MirrorMoveFg = true;
+	//}
+	//SetPosition(m_Position);
 }
 
 //=======================================

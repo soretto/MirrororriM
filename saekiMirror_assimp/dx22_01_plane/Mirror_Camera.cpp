@@ -82,6 +82,8 @@ void Mirror_Camera::Update()
 	////ターゲットを更新
 	//m_Target = MirrorPos + ReflectedVector;
 
+	//m_Position.y += 0.5f;
+
 }
 
 //=======================================

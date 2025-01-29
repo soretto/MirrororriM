@@ -49,10 +49,12 @@ void TestModel::Init()
 
 		m_Materiales.push_back(std::move(m));
 	}
+	m_Position.z -= 40.0f;
+	m_Position.x -= 20.0f;
+	m_Rotation.y = 5.0f;
 }
 void TestModel::Update()
 {
-	//m_Rotation.y += -0.01f;
 	m_Scale.x = 5;
 	m_Scale.y = 5;
 	m_Scale.z = 5;

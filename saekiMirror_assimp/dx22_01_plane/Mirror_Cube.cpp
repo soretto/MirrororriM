@@ -184,14 +184,16 @@ void Mirror_Cube::Update() {
 
 	//‰ñ“]‚³‚¹‚é
 	//m_Rotation.y += 0.01f;
+	if (GetAsyncKeyState('P') & 0x8000) { m_Rotation.y += 0.01f; }
+	if (GetAsyncKeyState('O') & 0x8000) { m_Rotation.y -= 0.01f; }
 
 	//ˆÚ“®
-	//if (GetAsyncKeyState('W') & 0x8000) { m_Position.z += 1.0f; }
-	//if (GetAsyncKeyState('S') & 0x8000) { m_Position.z -= 1.0f; }
-	//if (GetAsyncKeyState('A') & 0x8000) { m_Position.x -= 1.0f; }
-	//if (GetAsyncKeyState('D') & 0x8000) { m_Position.x += 1.0f; }
-	//if (GetAsyncKeyState('Q') & 0x8000) { m_Position.y += 1.0f; }
-	//if (GetAsyncKeyState('E') & 0x8000) { m_Position.y -= 1.0f; }
+	if (GetAsyncKeyState('A') & 0x8000) { m_Position.z += 1.0f; }
+	if (GetAsyncKeyState('D') & 0x8000) { m_Position.z -= 1.0f; }
+	if (GetAsyncKeyState('S') & 0x8000) { m_Position.x -= 1.0f; }
+	if (GetAsyncKeyState('W') & 0x8000) { m_Position.x += 1.0f; }
+	if (GetAsyncKeyState('Q') & 0x8000) { m_Position.y += 1.0f; }
+	if (GetAsyncKeyState('E') & 0x8000) { m_Position.y -= 1.0f; }
 }
 
 void Mirror_Cube::Uninit()
