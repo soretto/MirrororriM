@@ -16,11 +16,11 @@ void TestModel::Init()
 
 	//3Dモデルデータ
 	//std::u8string modelFile = u8"assets/model/cylinder/cylinder.obj";
-	std::u8string modelFile = u8"C:/Development/saekiMirror_assimp/dx22_01_plane/assets/model/Stages/stage01.obj";
+	std::u8string modelFile = u8"assets/model/Stages/stage01.obj";
 
 	//テクスチャディレクトリ
 	//std::string texDirectory = "assets/model/cylinder";
-	std::string texDirectory = "C:/Development/saekiMirror_assimp/dx22_01_plane/assets/model/Stages";
+	std::string texDirectory = "assets/model/Stages";
 
 	//Meshを読み込む
 	std::string tmpStr1(reinterpret_cast<const char*>(modelFile.c_str()), modelFile.size());
