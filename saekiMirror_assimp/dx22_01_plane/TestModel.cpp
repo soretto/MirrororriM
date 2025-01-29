@@ -15,11 +15,12 @@ void TestModel::Init()
 	StaticMesh staticmesh;
 
 	//3Dモデルデータ
+
 	//std::u8string modelFile = u8"assets\\model\\cylinder\\cylinder.obj";
 	std::u8string modelFile = u8"assets/model/Stages/stage01.obj";
 
 	//テクスチャディレクトリ
-	//std::string texDirectory = "assets\\model\\cylinder";
+	//std::string texDirectory = "assets/model/cylinder";
 	std::string texDirectory = "assets/model/Stages";
 
 	//Meshを読み込む
