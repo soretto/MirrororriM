@@ -1,5 +1,6 @@
 #pragma once
 #include<SimpleMath.h>
+#include"Mirror_Cube.h"
 
 //-----------------------------------------------------------------------------
 //Cameraクラス
@@ -18,6 +19,8 @@ protected:
 
 
 public:
+
+	Camera(Mirror_Cube& m_mirrorCube) :m_MirrorCube(m_mirrorCube) {}//コンストラクタ
 	void Init();
 	void Update();
 	void Draw();
@@ -30,4 +33,8 @@ public:
 
 	 //視線ベクトルゲッター
 	 DirectX::SimpleMath::Vector3 GetTargetVector()const;
+
+private:
+
+	Mirror_Cube& m_MirrorCube;
 };

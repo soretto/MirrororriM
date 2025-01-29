@@ -20,7 +20,7 @@ void TestModel::Init()
 
 	//テクスチャディレクトリ
 	//std::string texDirectory = "assets/model/cylinder";
-	std::string texDirectory = "assets/model/Stages";
+	std::string texDirectory ="assets/model/Stages";
 
 	//Meshを読み込む
 	std::string tmpStr1(reinterpret_cast<const char*>(modelFile.c_str()), modelFile.size());

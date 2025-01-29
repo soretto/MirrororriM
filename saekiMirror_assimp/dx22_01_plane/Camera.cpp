@@ -10,7 +10,7 @@ using namespace DirectX::SimpleMath;
 //=======================================
 void Camera::Init()
 {
-	m_Position = Vector3(0.0f, 20.0f, -80.0f);
+	m_Position = Vector3(-50.0f, 20.0f, -80.0f);
 	m_Target = Vector3(0.0f, 0.0f, 0.0f);
 }
 
@@ -112,7 +112,11 @@ DirectX::SimpleMath::Vector3 Camera::GetPosition()const
 //=======================================
 DirectX::SimpleMath::Vector3 Camera::GetTargetVector()const
 {
-	Vector3 viewDirection = m_Target - m_Position;
+	//Vector3 viewDirection = m_Target - m_Position;
+	//viewDirection.Normalize();
+	//return viewDirection;
+
+	Vector3 viewDirection = m_MirrorCube.GetMirrorPosition() - m_Position;
 	viewDirection.Normalize();
 	return viewDirection;
 }

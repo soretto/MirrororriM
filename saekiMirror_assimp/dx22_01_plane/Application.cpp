@@ -204,7 +204,7 @@ void Application::MainLoop()
     Mirror_Cube mirrorCube;
 
     // カメラ
-    Camera  camera;
+    Camera  camera(mirrorCube);
     Mirror_Camera mirrorCamera(mirrorCube, camera);
 
     mirrorCube.SetMirrorPosition(DirectX::SimpleMath::Vector3::Vector3(60.0f, 0.f, 30.f));

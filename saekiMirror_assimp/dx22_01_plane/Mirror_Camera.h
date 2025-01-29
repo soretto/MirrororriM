@@ -11,8 +11,8 @@ class Mirror_Camera : public Camera
 
 public:
 
-	Mirror_Camera( Mirror_Cube& mirrorcube,  Camera& camera)
-		:m_MirrorCube(mirrorcube), m_MainCamera(camera) {}//コンストラクタ
+	Mirror_Camera(Mirror_Cube& mirrorcube, Camera& camera) :Camera(mirrorcube), m_MirrorCube(mirrorcube), m_MainCamera(camera) {};//コンストラクタ
+		//:m_MirrorCube(mirrorcube), m_MainCamera(camera) {}//コンストラクタ
 
 	void Init();
 	void Update();
