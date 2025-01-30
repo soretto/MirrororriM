@@ -12,6 +12,9 @@ PS_IN vs_main(in VS_IN input)
     output.tex = input.tex;
     output.col = input.col;
 	
+    output.pos.y -= 0.15;
+    output.pos.x += 0.02;
+    
     return output;
 }
 

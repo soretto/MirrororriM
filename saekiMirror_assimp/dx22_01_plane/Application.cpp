@@ -3,10 +3,14 @@
 #include "Application.h"
 #include "Renderer.h"
 #include "Camera.h"
+
+//モデル
 #include "TestPlane.h"
 #include"TestCube.h"
 #include"TestModel.h"
+#include"Mirror_Frame.h"
 
+//鏡
 #include "Mirror_Cube.h"
 #include"Mirror_Camera.h"
 #include"MirrorRenderTexture.h"
@@ -201,13 +205,19 @@ void Application::MainLoop()
     TestCube cube;
     TestModel model;
 
+
     Mirror_Cube mirrorCube;
 
     // カメラ
-    Camera  camera(mirrorCube);
+    Camera  camera;
+    //鏡フレーム
+    MirrorFrame mirrorFrame;
+
     Mirror_Camera mirrorCamera(mirrorCube, camera);
 
     mirrorCube.SetMirrorPosition(DirectX::SimpleMath::Vector3::Vector3(60.0f, 0.f, 30.f));
+    mirrorFrame.SetPosition(mirrorCube.GetMirrorPosition());
+
 
     // 描画初期化
     Renderer::Init();
@@ -222,6 +232,7 @@ void Application::MainLoop()
     plane.Init();
     cube.Init();
     mirrorCube.Init();
+    mirrorFrame.Init();
 
     mirrorCube.m_srv = MirrorRenderTexture::GetShaderResourceView(); /**/
 
@@ -286,6 +297,7 @@ void Application::MainLoop()
                 cube.Update();
                 model.Update();
                 mirrorCube.Update();
+                mirrorFrame.Update();
                 
                 mirrorCamera.SetPosition(mirrorCube.GetMirrorPosition());
 
@@ -293,26 +305,27 @@ void Application::MainLoop()
                 mirrorCamera.Update();
                 mirrorCamera.Draw();
 
-
+            //鏡に映したいオブジェクトはここで描画--------------------------------
                 // テストプレーン描画
-                plane.Draw();
+                //plane.Draw();
                 //cube.Draw();    /**/
                 model.Draw();
-
+            //---------------------------------------------------------------------
 #endif
-                // 描画前処理
+             // 描画前処理
                 Renderer::Begin();
-
+            //鏡の外に描画するときはここに描画--------------------------------------
                 // カメラセット
                 camera.Draw();
 
                 model.Draw();
 
                 // テストプレーン描画
-                plane.Draw();
+               // plane.Draw();
                 //cube.Draw();
                 mirrorCube.Draw();
-
+                //mirrorFrame.Draw();
+            //------------------------------------------------------------------------
                 // 描画後処理
                 Renderer::End();
 

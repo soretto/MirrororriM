@@ -162,6 +162,7 @@
     <ClCompile Include="MirrorRenderTexture.cpp" />
     <ClCompile Include="Mirror_Camera.cpp" />
     <ClCompile Include="Mirror_Cube.cpp" />
+    <ClCompile Include="Mirror_Frame.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="StaticMesh.cpp" />
@@ -186,6 +187,7 @@
     <ClInclude Include="MirrorRenderTexture.h" />
     <ClInclude Include="Mirror_Camera.h" />
     <ClInclude Include="Mirror_Cube.h" />
+    <ClInclude Include="Mirror_Frame.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="StaticMesh.h" />

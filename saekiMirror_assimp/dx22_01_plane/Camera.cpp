@@ -10,7 +10,7 @@ using namespace DirectX::SimpleMath;
 //=======================================
 void Camera::Init()
 {
-	m_Position = Vector3(-50.0f, 20.0f, -80.0f);
+	m_Position = Vector3(0.0f, 50.0f, -80.0f);
 	m_Target = Vector3(0.0f, 0.0f, 0.0f);
 }
 
@@ -19,31 +19,37 @@ void Camera::Init()
 //=======================================
 void Camera::Update()
 {
-	////if (Input::GetKeyPress('W'))
-	//if (GetAsyncKeyState('W') & 0x8000)
-	//{
-	//	m_Position.x += 1.0f;
-	//	//MirrorMoveFg = true;
-	//}
-	////if (Input::GetKeyPress('S'))
-	//if (GetAsyncKeyState('S') & 0x8000)
-	//{
-	//	m_Position.x -= 1.0f;
-	//	//MirrorMoveFg = true;
-	//}
-	////if (Input::GetKeyPress('A'))
-	//if (GetAsyncKeyState('A') & 0x8000)
-	//{
-	//	m_Position.z += 1.0f;
-	//	//MirrorMoveFg = true;
-	//}
-	////if (Input::GetKeyPress('D'))
-	//if (GetAsyncKeyState('D') & 0x8000)
-	//{
-	//	m_Position.z -= 1.0f;
-	//	//MirrorMoveFg = true;
-	//}
-	//SetPosition(m_Position);
+	/*
+	
+
+	//if (Input::GetKeyPress('W'))
+	if (GetAsyncKeyState('W') & 0x8000)
+	{
+		m_Position.x += 1.0f;
+		//MirrorMoveFg = true;
+	}
+	//if (Input::GetKeyPress('S'))
+	if (GetAsyncKeyState('S') & 0x8000)
+	{
+		m_Position.x -= 1.0f;
+		//MirrorMoveFg = true;
+	}
+	//if (Input::GetKeyPress('A'))
+	if (GetAsyncKeyState('A') & 0x8000)
+	{
+		m_Position.z += 1.0f;
+		//MirrorMoveFg = true;
+	}
+	//if (Input::GetKeyPress('D'))
+	if (GetAsyncKeyState('D') & 0x8000)
+	{
+		m_Position.z -= 1.0f;
+		//MirrorMoveFg = true;
+	}
+	SetPosition(m_Position);
+
+	*/
+	
 }
 
 //=======================================
@@ -61,7 +67,7 @@ void Camera::Draw()
 
 	Renderer::SetViewMatrix(&m_ViewMatrix);
 
-	static const float viewHeight = 130.0f;//視野の高さ
+	static const float viewHeight = 200.0f;//視野の高さ
 	static const float viewWidth = viewHeight * static_cast<float>(Application::GetWidth()) / static_cast<float>(Application::GetHeight());//視野の幅
 
 	//プロジェクション行列の生成
@@ -112,11 +118,7 @@ DirectX::SimpleMath::Vector3 Camera::GetPosition()const
 //=======================================
 DirectX::SimpleMath::Vector3 Camera::GetTargetVector()const
 {
-	//Vector3 viewDirection = m_Target - m_Position;
-	//viewDirection.Normalize();
-	//return viewDirection;
-
-	Vector3 viewDirection = m_MirrorCube.GetMirrorPosition() - m_Position;
+	Vector3 viewDirection = m_Target - m_Position;
 	viewDirection.Normalize();
 	return viewDirection;
 }

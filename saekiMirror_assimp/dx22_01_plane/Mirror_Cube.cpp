@@ -103,7 +103,7 @@ void Mirror_Cube::Init()
 	}
 
 	//平たく
-	m_Scale = Vector3(0.3f, 3.0f, 3.0f);
+	m_Scale = Vector3(0.3f, 5.0f, 3.0f);
 
 	// 頂点バッファ生成
 	m_VertexBuffer.Create(vertices);
@@ -182,16 +182,15 @@ void Mirror_Cube::Draw()
 
 void Mirror_Cube::Update() {
 
-	//回転させる
-	//m_Rotation.y += 0.01f;
-	if (GetAsyncKeyState('P') & 0x8000) { m_Rotation.y += 0.01f; }
-	if (GetAsyncKeyState('O') & 0x8000) { m_Rotation.y -= 0.01f; }
+
+	if (GetAsyncKeyState('R') & 0x8000) { m_Rotation.y += 0.01f; }
+	if (GetAsyncKeyState('L') & 0x8000) { m_Rotation.y -= 0.01f; }
 
 	//移動
-	if (GetAsyncKeyState('A') & 0x8000) { m_Position.z += 1.0f; }
-	if (GetAsyncKeyState('D') & 0x8000) { m_Position.z -= 1.0f; }
-	if (GetAsyncKeyState('S') & 0x8000) { m_Position.x -= 1.0f; }
-	if (GetAsyncKeyState('W') & 0x8000) { m_Position.x += 1.0f; }
+	if (GetAsyncKeyState('W') & 0x8000) { m_Position.z += 1.0f; }
+	if (GetAsyncKeyState('S') & 0x8000) { m_Position.z -= 1.0f; }
+	if (GetAsyncKeyState('A') & 0x8000) { m_Position.x -= 1.0f; }
+	if (GetAsyncKeyState('D') & 0x8000) { m_Position.x += 1.0f; }
 	if (GetAsyncKeyState('Q') & 0x8000) { m_Position.y += 1.0f; }
 	if (GetAsyncKeyState('E') & 0x8000) { m_Position.y -= 1.0f; }
 }

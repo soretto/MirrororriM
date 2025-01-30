@@ -21,7 +21,7 @@ void TestModel::Init()
 
 	//テクスチャディレクトリ
 	//std::string texDirectory = "assets/model/cylinder";
-	std::string texDirectory ="assets/model/Stages";
+	std::string texDirectory = "assets/model/Stages";
 
 	//Meshを読み込む
 	std::string tmpStr1(reinterpret_cast<const char*>(modelFile.c_str()), modelFile.size());
@@ -51,15 +51,26 @@ void TestModel::Init()
 
 		m_Materiales.push_back(std::move(m));
 	}
+	//位置
 	m_Position.z -= 40.0f;
-	m_Position.x -= 20.0f;
-	m_Rotation.y = 5.0f;
+	m_Position.y -= 20.0f;
+
+	//回転
+	m_Rotation.y = 4.9f;
+
+	m_Scale = Vector3(0.1f, 0.1f, 0.1f);
 }
 void TestModel::Update()
 {
-	m_Scale.x = 5;
-	m_Scale.y = 5;
-	m_Scale.z = 5;
+	//m_Rotation.y += -0.01f;
+	m_Scale.x = 10;
+	m_Scale.y = 10;
+	m_Scale.z = 10;
+
+	if (GetAsyncKeyState('W') & 0x8000)
+	{
+		
+	}
 }
 
 

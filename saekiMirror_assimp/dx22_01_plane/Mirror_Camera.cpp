@@ -82,7 +82,7 @@ void Mirror_Camera::Update()
 	////ターゲットを更新
 	//m_Target = MirrorPos + ReflectedVector;
 
-	//m_Position.y += 0.5f;
+	m_Position.y -= 0.3;
 
 }
 
@@ -99,7 +99,7 @@ void Mirror_Camera::Draw() {
 	// このコードは確認テストのために残す
 	// m_ViewMatrix = m_ViewMatrix.CreateLookAt(m_Position, m_Target, up);
 
-	static const float viewHeight = 50.0f;//視野の高さ
+	static const float viewHeight = 45.0f;//視野の高さ
 	static const float viewWidth = viewHeight * static_cast<float>(Application::GetWidth()) / static_cast<float>(Application::GetHeight());//視野の幅
 
 	//プロジェクション行列の生成
