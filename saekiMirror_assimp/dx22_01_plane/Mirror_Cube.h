@@ -22,6 +22,7 @@ public:
 	void SetMirrorPosition(DirectX::SimpleMath::Vector3 position);
 	DirectX::SimpleMath::Vector3 GetMirrorPosition();
 	DirectX::SimpleMath::Vector3 GetMirrorRotation();
+	DirectX::SimpleMath::Vector3 GetMirrorScale();
 	void RenderMirrorTexture(); // ‹¾‚ÌƒJƒƒ‰‚©‚çƒŒƒ“ƒ_ƒŠƒ“ƒO
 
 	ID3D11ShaderResourceView* m_srv;

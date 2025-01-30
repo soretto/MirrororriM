@@ -23,9 +23,18 @@ public:
 	// プロジェクション行列の取得
 	DirectX::XMMATRIX GetProjectionMatrix(float aspectRatio) const;
 
+	static DirectX::SimpleMath::Vector3 GetMirrorCameraPos();
+
+	static DirectX::SimpleMath::Vector3	m_Position;
+
+
+
 private:
 
 	 Mirror_Cube& m_MirrorCube;
 
 	 Camera& m_MainCamera;
+
+	 float angle;
+	 float mirrorToReflectionCameraDistance;
 };

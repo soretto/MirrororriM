@@ -10,7 +10,8 @@ using namespace DirectX::SimpleMath;
 //=======================================
 void Camera::Init()
 {
-	m_Position = Vector3(-50.0f, 20.0f, -80.0f);
+	//m_Position = Vector3(-50.0f, 50.0f, -80.0f);
+	m_Position = Vector3(0.0f, 50.0f, -100.0f);
 	m_Target = Vector3(0.0f, 0.0f, 0.0f);
 }
 
@@ -72,10 +73,10 @@ void Camera::Draw()
 	float farPlane = 1000.0f;      // ファークリップ
 
 	//透視投影の場合(プロダクション行列を作成)
-	//m_ProjectionMatrix =  DirectX::XMMatrixPerspectiveFovLH( fieldOfView,  aspectRatio,  nearPlane,  farPlane);	//左手系にした　20230511 by suzuki.tomoki
+	m_ProjectionMatrix =  DirectX::XMMatrixPerspectiveFovLH( fieldOfView,  aspectRatio,  nearPlane,  farPlane);	//左手系にした　20230511 by suzuki.tomoki
 
 	// 平行投影の場合(プロダクション行列を作成)
-	m_ProjectionMatrix = DirectX::XMMatrixOrthographicLH(viewWidth, viewHeight, nearPlane, farPlane);
+	//m_ProjectionMatrix = DirectX::XMMatrixOrthographicLH(viewWidth, viewHeight, nearPlane, farPlane);
 
 	// DIRECTXTKのメソッドは右手系　20230511 by suzuki.tomoki
 	// 右手系にすると３角形頂点が反時計回りになるので描画されなくなるので注意

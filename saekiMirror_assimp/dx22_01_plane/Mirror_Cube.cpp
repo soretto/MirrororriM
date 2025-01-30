@@ -24,6 +24,11 @@ Vector3 Mirror_Cube::GetMirrorRotation()
 	return m_Rotation;
 }
 
+Vector3 Mirror_Cube::GetMirrorScale()
+{
+	return m_Scale;
+}
+
 void Mirror_Cube::Init()
 {
 	// 頂点データ
@@ -103,7 +108,7 @@ void Mirror_Cube::Init()
 	}
 
 	//平たく
-	m_Scale = Vector3(0.3f, 3.0f, 3.0f);
+	m_Scale = Vector3(0.03f, 3.0f, 3.0f);
 
 	// 頂点バッファ生成
 	m_VertexBuffer.Create(vertices);

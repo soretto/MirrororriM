@@ -1,4 +1,5 @@
 #include	"TestCube.h"
+#include"Mirror_Camera.h"
 
 using namespace DirectX::SimpleMath;
 
@@ -140,6 +141,10 @@ void TestCube::Update()
 	//‰ñ“]‚³‚¹‚é
 	m_Rotation.y += 0.01f;
 	m_Rotation.x += 0.01f;
+
+	m_Scale=Vector3(0.3f, 0.3f, 0.3f);
+
+	m_Position= Mirror_Camera::GetMirrorCameraPos();
 
 }
 

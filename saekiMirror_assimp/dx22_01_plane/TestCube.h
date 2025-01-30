@@ -5,6 +5,8 @@
 #include "Shader.h"
 #include"Texture.h"
 
+
+
 //-----------------------------------------------------------------------------
 //TestPlaneクラス
 //-----------------------------------------------------------------------------
@@ -27,6 +29,7 @@ protected:
 
 	Texture m_Texture;//テクスチャ
 
+
 public:
 
 	enum class MirrorType
@@ -34,6 +37,7 @@ public:
 		Normal,
 		Mirror,
 	};
+
 
 	void Init();
 	void Draw();

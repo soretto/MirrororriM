@@ -287,7 +287,7 @@ void Application::MainLoop()
                 model.Update();
                 mirrorCube.Update();
                 
-                mirrorCamera.SetPosition(mirrorCube.GetMirrorPosition());
+                //mirrorCamera.SetPosition(mirrorCube.GetMirrorPosition());
 
 #if 1
                 mirrorCamera.Update();
@@ -310,7 +310,7 @@ void Application::MainLoop()
 
                 // テストプレーン描画
                 plane.Draw();
-                //cube.Draw();
+                cube.Draw();
                 mirrorCube.Draw();
 
                 // 描画後処理
